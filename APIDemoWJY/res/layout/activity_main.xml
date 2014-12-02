@@ -1,0 +1,127 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btn_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/animation" />
+
+        <Button
+            android:id="@+id/btn_manual_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_animation"
+            android:layout_marginTop="5dp"
+            android:text="manual layout" />
+
+        <Button
+            android:id="@+id/btn_list_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_manual_layout"
+            android:layout_marginTop="5dp"
+            android:text="list test" />
+
+        <Button
+            android:id="@+id/btn_fragment_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_list_test"
+            android:layout_marginTop="5dp"
+            android:text="fragment test" />
+
+        <Button
+            android:id="@+id/btn_fragment_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_fragment_test"
+            android:layout_marginTop="5dp"
+            android:text="fragment dynamic" />
+
+        <Button
+            android:id="@+id/btn_intent_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_fragment_dynamic"
+            android:layout_marginTop="5dp"
+            android:text="intent test" />
+
+        <Button
+            android:id="@+id/btn_contact_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_intent_test"
+            android:layout_marginTop="5dp"
+            android:text="contact picker" />
+
+        <Button
+            android:id="@+id/btn_earthquake_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_contact_picker"
+            android:layout_marginTop="5dp"
+            android:text="earthquake test" />
+
+        <Button
+            android:id="@+id/btn_download_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_earthquake_test"
+            android:layout_marginTop="5dp"
+            android:text="download manager test" />
+
+        <Button
+            android:id="@+id/btn_content_provider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_download_manager"
+            android:layout_marginTop="5dp"
+            android:text="content provider test" />
+
+        <Button
+            android:id="@+id/btn_asynctask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_content_provider"
+            android:layout_marginTop="5dp"
+            android:text="async task test" />
+
+        <Button
+            android:id="@+id/btn_http"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_asynctask"
+            android:layout_marginTop="5dp"
+            android:text="http https test" />
+
+        <Button
+            android:id="@+id/btn_terminate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_http"
+            android:layout_marginTop="5dp"
+            android:text="terminate test" />
+
+        <Button
+            android:id="@+id/btn_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_terminate"
+            android:layout_marginTop="5dp"
+            android:text="service test" />
+    </RelativeLayout>
+
+</ScrollView>
