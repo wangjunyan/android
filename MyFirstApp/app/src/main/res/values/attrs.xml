@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RadarScanView">
+        <attr name="circleColor" format="color"/>
+        <attr name="innerCircleColor" format="color" />
+        <attr name="layerColor" format="color" />
+        <attr name="innerTextColor" format="color" />
+        <attr name="innerTextSize" format="integer" />
+
+        <attr name="radarShaderColor1" format="color" />
+        <attr name="radarShaderColor2" format="color" />
+        <attr name="radarLineColor" format="color" />
+
+        <attr name="borderWidth" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="UserGuideView">
+
+        <attr name="HighlightViewStyle" format="enum">
+            <enum name="rect" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="oval" value="2"/>
+        </attr>
+        <attr name="MaskBlurStyle" format="enum">
+            <enum name="solid" value="0"/>
+            <enum name="normal" value="1"/>
+        </attr>
+        <attr name="tipView" format="reference" />
+        <attr name="maskColor" format="reference|color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension"/>
+        <attr name="rb_radius" format="dimension"/>
+        <attr name="rb_duration" format="integer"/>
+        <attr name="rb_rippleAmount" format="integer"/>
+        <attr name="rb_scale" format="float"/>
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0"/>
+            <enum name="strokeRipple" value="1"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

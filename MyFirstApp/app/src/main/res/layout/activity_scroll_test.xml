@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wangjunyan.myfirstapp.ScrollTestActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <ImageView
+        android:id="@+id/scrollImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scroll_testing"
+        android:contentDescription="Testing Scrolling"/>
+    <TextView
+        android:id="@+id/textViewToRight"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <ImageView
+        android:id="@+id/scrollImageViewToRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scroll_testing"
+        android:contentDescription="Testing Scrolling"/>
+    <TextView
+        android:id="@+id/textViewToLeft"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <ImageView
+        android:id="@+id/scrollImageViewToLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scroll_testing"
+        android:contentDescription="Testing Scrolling"/>
+
+</LinearLayout>

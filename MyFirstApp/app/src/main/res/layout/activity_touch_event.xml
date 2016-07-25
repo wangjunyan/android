@@ -1,0 +1,22 @@
+<com.example.wangjunyan.myfirstapp.LayoutView1
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_view1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wangjunyan.myfirstapp.TouchEventActivity">
+
+    <com.example.wangjunyan.myfirstapp.LayoutView2
+        android:id="@+id/layout_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.wangjunyan.myfirstapp.MyTextView
+            android:id="@+id/text_view"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.example.wangjunyan.myfirstapp.LayoutView2>
+
+</com.example.wangjunyan.myfirstapp.LayoutView1>

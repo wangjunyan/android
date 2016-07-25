@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context="com.example.wangjunyan.myfirstapp.TempTestActivity">
+
+    <EditText
+        android:id="@+id/edt_prgress"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="progress"/>
+
+    <EditText
+        android:id="@+id/edt_secondProgress"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_prgress"
+        android:hint="second progress"/>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_secondProgress"
+        android:text="OK"/>
+
+    <Button
+        android:id="@+id/btn_startjob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_ok"
+        android:layout_alignTop="@id/btn_ok"
+        android:text="Start Job"/>
+
+    <Button
+        android:id="@+id/btn_stopjob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_startjob"
+        android:layout_alignTop="@id/btn_startjob"
+        android:text="Stop Job"/>
+
+
+    <ProgressBar
+        android:id="@+id/circularProgressbar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/btn_ok"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:progress="25"
+        android:max="100"
+        android:secondaryProgress="80"
+        android:progressDrawable="@drawable/circular_progress" />
+
+    <Button
+        android:id="@+id/btn_install"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circularProgressbar"
+        android:text="Install"/>
+
+    <Button
+        android:id="@+id/btn_uninstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_install"
+        android:layout_alignTop="@id/btn_install"
+        android:text="Uninstall"/>
+
+    <Button
+        android:id="@+id/btn_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_install"
+        android:text="Float Window"/>
+
+    <Button
+        android:id="@+id/btn_aidl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_window"
+        android:layout_alignTop="@id/btn_window"
+        android:text="AIDL Service"/>
+
+    <Button
+        android:id="@+id/btn_safebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_window"
+        android:text="Safe Box"/>
+
+    <com.example.wangjunyan.myfirstapp.ProgressView
+        android:id="@+id/progress_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_safebox"/>
+
+    <com.example.wangjunyan.myfirstapp.LikeButtonView
+        android:id="@+id/like_button_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/progress_view"
+        android:visibility="gone"/>
+
+    <com.example.wangjunyan.myfirstapp.LightWaveOvalView
+        android:id="@+id/wave_oval"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/like_button_view"/>
+
+
+</RelativeLayout>

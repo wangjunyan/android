@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.apidemowjy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+
+    <application
+        android:name="com.example.apidemowjy.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="com.example.apidemowjy.EarthquakeSearchResults" />
+
+        <activity
+            android:name="com.example.apidemowjy.MainActivity"
+            android:label="@string/app_name" >
+
+            <!-- android:process=":com.example.apidemowjy.main" -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.apidemowjy.AnimationActivity"
+            android:process=":com.example.apidemowjy.sub" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.ManualLayoutActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.ToDoListActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.ToDoListFragActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.MyFragmentActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.IntentTestActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.MyOtherActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.ContactPickerTester" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.ContactPicker" >
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" >
+                </action>
+
+                <category android:name="android.intent.category.DEFAULT" >
+                </category>
+
+                <data
+                    android:path="contacts"
+                    android:scheme="content" >
+                </data>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.apidemowjy.NostromoController" >
+            <intent-filter android:label="@string/Nuke_From_Orbit" >
+                <action android:name="com.example.apidemowjy.nostromo.NUKE_FROM_ORBIT" />
+
+                <data android:mimeType="audio/*" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.apidemowjy.EarthquakeActivity" >
+        </activity>
+        <activity
+            android:name="com.example.apidemowjy.EarthquakeSearchResults"
+            android:label="Earthquake Search"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name="com.example.apidemowjy.DownloadTestActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.PreferencesActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.Preferences2Activity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.FragmentPreferencesActivity" >
+        </activity>
+
+        <provider
+            android:name="com.example.apidemowjy.ToDoContentProvider"
+            android:authorities="com.example.apidemowjy.todoprovider" />
+        <provider
+            android:name="com.example.apidemowjy.EarthquakeProvider"
+            android:authorities="com.example.apidemowjy.earthquakeprovider" />
+
+        <activity android:name="com.example.apidemowjy.ContentProvidersActivity" >
+        </activity>
+
+        <service
+            android:name="com.example.apidemowjy.EarthquakeUpdateService"
+            android:enabled="true" />
+
+        <receiver android:name="com.example.apidemowjy.EarthquakeAlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.example.apidemowjy.ACTION_REFRESH_EARTHQUAKE_ALARM" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.example.apidemowjy.AsyncTaskTest" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.HttpTestActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.TerminateActivity" >
+        </activity>
+        <activity android:name="com.example.apidemowjy.CounterActivity" >
+        </activity>
+
+        <service
+            android:name="com.example.apidemowjy.CounterService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

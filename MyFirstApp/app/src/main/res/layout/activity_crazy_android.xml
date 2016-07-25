@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.wangjunyan.myfirstapp.FirstLineCodeTestActivity">
+
+    <Button
+        android:id="@+id/btn_drawview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Draw View"/>
+
+
+
+    <Button
+        android:id="@+id/btn_ballgame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ball Game"/>
+
+    <Button
+        android:id="@+id/btn_blast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blast"/>
+
+    <Button
+        android:id="@+id/btn_ballfall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ball Fall"/>
+    <!--
+    <Button
+        android:id="@+id/btn_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification"/>
+
+    <Button
+        android:id="@+id/btn_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service"/>
+        -->
+
+</LinearLayout>
