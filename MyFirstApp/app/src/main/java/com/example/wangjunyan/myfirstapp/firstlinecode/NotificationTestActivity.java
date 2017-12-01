@@ -33,7 +33,7 @@ public class NotificationTestActivity extends Activity {
                 notification.flags = Notification.FLAG_SHOW_LIGHTS;
                 Intent intent = new Intent(NotificationTestActivity.this, ContactTestActivity.class);
                 PendingIntent pi = PendingIntent.getActivity(NotificationTestActivity.this, 0 , intent, PendingIntent.FLAG_CANCEL_CURRENT);
-                notification.setLatestEventInfo(NotificationTestActivity.this, "This is content title", "This is content text", pi);
+                //notification.setLatestEventInfo(NotificationTestActivity.this, "This is content title", "This is content text", pi);
                 notificationManager.notify(1, notification);
             }
         });

@@ -7,10 +7,55 @@
     android:background="#ffffff"
     tools:context="com.example.wangjunyan.myfirstapp.TempTestActivity">
 
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:textSize="14sp"
+            android:text="ft"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:text="\u2191"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00ff00"
+            android:textSize="14sp"
+            android:text="ft"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00ff00"
+            android:textSize="20sp"
+            android:text="\u2193"/>
+    </LinearLayout>
+
+    <com.example.wangjunyan.myfirstapp.StatsValueLayout
+        android:id="@+id/stats_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/layout_top"
+        />
+
     <EditText
         android:id="@+id/edt_prgress"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/stats_layout"
+        android:linksClickable="true"
+        android:autoLink="web|email"
         android:hint="progress"/>
 
     <EditText
@@ -111,6 +156,5 @@
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:layout_below="@id/like_button_view"/>
-
 
 </RelativeLayout>

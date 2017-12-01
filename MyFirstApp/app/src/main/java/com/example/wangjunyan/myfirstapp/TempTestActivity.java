@@ -14,6 +14,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.text.util.Linkify;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -27,6 +30,8 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -77,6 +82,31 @@ public class TempTestActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temp_test);
         edtProgress = (EditText) findViewById(R.id.edt_prgress);
+
+        edtProgress.setLinksClickable(true);
+        edtProgress.setAutoLinkMask(Linkify.WEB_URLS);
+        //If the edit text contains previous text with potential links
+        Linkify.addLinks(edtProgress, Linkify.WEB_URLS);
+        edtProgress.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                Linkify.addLinks(s, Linkify.WEB_URLS);
+
+            }
+        });
+
         edtSecondProgress = (EditText) findViewById(R.id.edt_secondProgress);
         btnOK = (Button) findViewById(R.id.btn_ok);
         progressBar = (ProgressBar) findViewById(R.id.circularProgressbar);
@@ -275,6 +305,18 @@ public class TempTestActivity extends Activity {
 
         lightWaveOvalView = (LightWaveOvalView) findViewById(R.id.wave_oval);
 
+        StatsValueLayout statsValueLayout = (StatsValueLayout) findViewById(R.id.stats_layout);
+        StatsValueLayout.StatsValue sv1 = new StatsValueLayout.StatsValue(1, "1", R.drawable.grey_circle, R.drawable.blue_circle);
+        StatsValueLayout.StatsValue sv2 = new StatsValueLayout.StatsValue(2, "2", R.drawable.grey_circle, R.drawable.blue_circle);
+        StatsValueLayout.StatsValue sv3 = new StatsValueLayout.StatsValue(3, "3", R.drawable.grey_circle, R.drawable.blue_circle);
+        StatsValueLayout.StatsValue sv4 = new StatsValueLayout.StatsValue(4, "4+", R.drawable.grey_circle, R.drawable.blue_circle);
+        List<StatsValueLayout.StatsValue> statsValues = new ArrayList<>();
+        statsValues.add(sv1);
+        statsValues.add(sv2);
+        statsValues.add(sv3);
+        statsValues.add(sv4);
+        statsValueLayout.setStatsValues(statsValues);
+        statsValueLayout.setValue(-1);
     }
 
     public void createShortcut(boolean install){

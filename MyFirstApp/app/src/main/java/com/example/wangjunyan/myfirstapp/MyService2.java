@@ -100,8 +100,8 @@ public class MyService2 extends Service {
         notification.defaults |= Notification.DEFAULT_ALL;
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
                 new Intent(this, FirstLineCodeTestActivity.class), 0);
-        notification.setLatestEventInfo(this, "My Notification", message,
-                contentIntent);
+        //notification.setLatestEventInfo(this, "My Notification", message,
+        //        contentIntent);
         mNotificationManager.notify(0, notification);
     }
 

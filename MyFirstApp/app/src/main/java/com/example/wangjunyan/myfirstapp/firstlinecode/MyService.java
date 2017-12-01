@@ -30,7 +30,7 @@ public class MyService extends Service {
         Notification notification = new Notification(R.drawable.notify, "Notification comes", System.currentTimeMillis());
         Intent notificationIntent = new Intent(MyService.this, ContactTestActivity.class);
         PendingIntent pi = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-        notification.setLatestEventInfo(this, "This is title", "This is content", pi);
+        //notification.setLatestEventInfo(this, "This is title", "This is content", pi);
         startForeground(1, notification);
     }
 
